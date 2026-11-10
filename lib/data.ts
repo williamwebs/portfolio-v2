@@ -312,32 +312,21 @@ export const skills = [
   "LLM / RAG"
 ];
 
-export const blogPosts = [
-  {
-    title: "Architecting Scalable Microservices with Next.js and Node.js",
-    summary:
-      "A deep dive into distributed service boundaries, message queues, and end-to-end type safety in production systems.",
-    date: "Oct 2024",
-    readTime: "6 min read",
-    tags: ["System Design", "Node.js", "Architecture"],
-    url: "#",
-  },
+export const blogPosts: {
+  title: string;
+  summary: string;
+  date: string;
+  readTime: string;
+  tags: string[];
+  url: string;
+}[] = [
   // {
-  //   title: "Cutting Latency by 40% with Intelligent Edge Caching & Partial Prefetching",
+  //   title: "Architecting Scalable Microservices with Next.js and Node.js",
   //   summary:
-  //     "Practical strategies for utilizing CDN-level caching, stale-while-revalidate patterns, and Next.js modern cache directives.",
-  //   date: "Aug 2024",
-  //   readTime: "4 min read",
-  //   tags: ["Performance", "Edge", "Next.js"],
-  //   url: "#",
-  // },
-  // {
-  //   title: "Building Production-Ready Real-Time Collaboration Systems",
-  //   summary:
-  //     "Lessons learned building WebSockets and WebRTC multi-user workspaces that handle network drops and high concurrency.",
-  //   date: "May 2024",
-  //   readTime: "8 min read",
-  //   tags: ["WebSockets", "WebRTC", "TypeScript"],
+  //     "A deep dive into distributed service boundaries, message queues, and end-to-end type safety in production systems.",
+  //   date: "Oct 2024",
+  //   readTime: "6 min read",
+  //   tags: ["System Design", "Node.js", "Architecture"],
   //   url: "#",
   // },
 ];
