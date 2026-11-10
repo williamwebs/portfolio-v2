@@ -20,7 +20,7 @@ export function Header() {
           onClick={() => setMobileMenuOpen(false)}
         >
           <Logo className="w-8 h-8" />
-          <span className="text-base font-bold tracking-tight text-neutral-900">
+          <span className="text-base font-normal font-mono tracking-tight text-neutral-900">
             {personalInfo.name}
           </span>
         </Link>
@@ -43,7 +43,7 @@ export function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="group flex items-center justify-between py-3 text-lg font-medium text-neutral-700 hover:text-black border-b border-neutral-100"
+                className="group flex items-center justify-between py-3 text-xs md:text-sm font-medium font-mono text-neutral-700 hover:text-black border-b border-neutral-100"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span>{link.label}</span>
@@ -69,14 +69,14 @@ export function Header() {
           <div className="mt-6 pt-4 border-t border-neutral-100 flex flex-col gap-4">
             <a
               href={`mailto:${personalInfo.email}`}
-              className="inline-flex h-11 items-center justify-center rounded-lg bg-neutral-900 px-5 text-sm font-medium text-white hover:bg-neutral-800 transition-colors"
+              className="inline-flex h-11 items-center justify-center bg-neutral-900 px-5 text-sm font-medium font-mono text-white hover:bg-neutral-800 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Get in touch →
             </a>
 
             {/* Social icons */}
-            <div className="flex items-center justify-center gap-6 pt-2">
+            <div className="flex items-center justify-center gap-1 pt-2">
               {socialLinks.map((link) => {
                 const Icon = socialIconMap[link.icon];
                 return (
@@ -85,10 +85,10 @@ export function Header() {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-neutral-500 hover:text-black transition-colors"
+                    className="text-neutral-500 hover:text-black transition-colors border w-10 h-10 flex items-center justify-center"
                     aria-label={link.name}
                   >
-                    {Icon && <Icon className="w-5 h-5" />}
+                    {Icon && <Icon className="w-3 h-3" />}
                   </a>
                 );
               })}

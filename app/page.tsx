@@ -1,3 +1,4 @@
+import { IntroAnimation } from "@/components/intro-animation";
 import { Header } from "@/components/header";
 import { Sidebar } from "@/components/sidebar";
 import { Hero } from "@/components/sections/hero";
@@ -12,6 +13,9 @@ import { Footer } from "@/components/footer";
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-neutral-900 selection:bg-neutral-900 selection:text-white">
+      {/* 5-Column Tetris Intro Animation on page load */}
+      <IntroAnimation />
+
       {/* Mobile Header (Hidden on md/lg desktop and laptop screens) */}
       <Header />
 
