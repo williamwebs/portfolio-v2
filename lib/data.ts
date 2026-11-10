@@ -37,38 +37,142 @@ export const socialLinks = [
   },
 ];
 
-export const projects = [
+export interface Project {
+  id: string;
+  name: string;
+  title: string;
+  tagline: string;
+  description: string;
+  problemStatement: string;
+  approach: string;
+  solution: string;
+  contribution: string;
+  toolsUsed: string[];
+  techStack: string[];
+  images?: string[];
+  liveUrl?: string | null;
+  codeUrl?: string | null;
+}
+
+export const projects: Project[] = [
   {
-    name: "Project One",
+    id: "awujo",
+    name: "Awujo",
+    title: "Awujo: Group-Buying for Nigerian Neighbourhoods",
+    tagline:
+      "Group-buying platform enabling urban neighbours to split bulk staple goods at wholesale prices.",
     description:
-      "A full-stack e-commerce platform with real-time inventory management, payment processing, and an admin dashboard.",
-    techStack: ["Next.js", "TypeScript", "Node.js", "MongoDB"],
-    liveUrl: "https://example.com",
-    codeUrl: "https://github.com/williamanaza/project-one",
+      "A mobile-first progressive web application (PWA) that coordinates neighbourhood bulk-buying. Zone boundaries are defined as PostGIS polygons, with custom proximity and urgency ranking.",
+    problemStatement:
+      "Buying staple goods in bulk is cheaper, but most households cannot afford a large purchase alone or store that much. Neighbours who would happily split a bulk order have no simple way to find each other and coordinate.",
+    approach:
+      "I treated this as a coordination problem rather than a marketplace problem. Groups form around neighbourhoods, so I modelled the app around geographic zones. Since group buys depend on timing, I ranked what users see by how close it is and how urgent it is. I built it as a mobile-first PWA so people can use it without installing from an app store.",
+    solution:
+      "Awujo lets people in the same urban neighbourhood join or start group purchases of bulk commodities and split the cost at wholesale prices. Zone boundaries are defined as PostGIS polygons, and a custom ranking algorithm surfaces the most relevant and time-sensitive group buys first. Version 1 is built and shipped.",
+    contribution:
+      "I designed and built it end to end as a personal project. That includes the zone boundary polygons, the proximity and urgency ranking algorithm, authentication emails through a custom SMTP setup with Resend, and DNS configuration for the project's subdomain.",
+    toolsUsed: [
+      "Next.js 14",
+      "Supabase",
+      "PostGIS",
+      "TanStack Query",
+      "Zustand",
+      "Serwist",
+      "Resend",
+    ],
+    techStack: [
+      "Next.js 14",
+      "Supabase",
+      "PostGIS",
+      "TanStack Query",
+      "Zustand",
+      "Serwist",
+      "Resend",
+    ],
+    images: ["/awujo-screenshot.png", "/awujo-screenshot-1.png", "/awujo-screenshot-2.png"],
+    liveUrl: "https://awujo.top", // Add your live URL when deployed
+    codeUrl: null,
   },
   {
-    name: "Project Two",
+    id: "events-in-lagos",
+    name: "Events in Lagos",
+    title: "Events in Lagos: Location-Aware Event Discovery",
+    tagline:
+      "Location-aware event discovery platform with interactive map browsing, AI assistant, and organizer dashboards.",
     description:
-      "AI-powered content management system with automated tagging, search optimization, and multi-language support.",
-    techStack: ["React", "Python", "FastAPI", "PostgreSQL"],
-    liveUrl: "https://example.com",
-    codeUrl: "https://github.com/williamanaza/project-two",
+      "A premium event discovery platform featuring map-based exploration, real-time alerts, organizer & admin suites, and a RAG-powered Gemini event assistant.",
+    problemStatement:
+      "Events in Lagos are scattered across social media pages and word of mouth, which makes it hard for attendees to find what is happening near them and hard for organizers to reach the right people.",
+    approach:
+      "I designed for three kinds of users from the start: attendees, organizers, and a platform admin. Each has a different need, so each got a dedicated experience on top of one shared database schema. Location came first, so the map is central to discovery. I also added an AI assistant so people can ask questions in plain language instead of filtering manually.",
+    solution:
+      "A premium event discovery platform with a map-based browsing experience, organizer and admin dashboards, real-time notifications, and a RAG-powered event assistant. SEO infrastructure helps events get found through search. The platform is live at events-in-lagos.vercel.app and is at an advanced stage of development.",
+    contribution:
+      "I designed the full database schema and built the attendee experience, the organizer and admin dashboards, the real-time notification system, the SEO infrastructure, and the RAG event assistant.",
+    toolsUsed: [
+      "Next.js 14 (App Router)",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "React Leaflet",
+      "OpenStreetMap",
+      "Vercel AI SDK",
+      "Google Gemini",
+      "Vercel",
+    ],
+    techStack: [
+      "Next.js 14",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "React Leaflet",
+      "OpenStreetMap",
+      "Vercel AI SDK",
+      "Google Gemini",
+    ],
+    images: ["/eil-screenshot.png", "/eil-screenshot-1.png", "/eil-screenshot-2.png", "/eil-screenshot-3.png"],
+    liveUrl: "https://events-in-lagos.vercel.app",
+    codeUrl: null,
   },
   {
-    name: "Project Three",
+    id: "cueactor",
+    name: "CueActor",
+    title: "CueActor: An AI Scene Partner for Actors",
+    tagline:
+      "AI-powered scene partner platform enabling actors to rehearse lines in real time without a human reader.",
     description:
-      "Real-time collaboration tool for remote teams with video conferencing, shared workspaces, and project tracking.",
-    techStack: ["Next.js", "TypeScript", "WebRTC", "Socket.io"],
-    liveUrl: "https://example.com",
-    codeUrl: "https://github.com/williamanaza/project-three",
-  },
-  {
-    name: "Project Four",
-    description:
-      "Developer productivity dashboard that aggregates GitHub activity, CI/CD pipelines, and deployment metrics.",
-    techStack: ["React", "Node.js", "GraphQL", "AWS"],
-    liveUrl: "https://example.com",
-    codeUrl: "https://github.com/williamanaza/project-four",
+      "A platform for actors to rehearse scripts against Hazel, an AI scene partner with real-time turn-taking voice responses, integrated Google Calendar scheduling, Stripe payments, and Agora P2P video calling.",
+    problemStatement:
+      "Actors frequently need a reliable rehearsal partner to run lines on demand without relying on another human reader, while also needing integrated session scheduling, secure payment processing, and peer-to-peer video calls in one place.",
+    approach:
+      "I designed and engineered a low-latency, conversational rehearsal interface with turn-taking AI audio synthesis, backed by Agora WebRTC for video calls, WebSocket signaling, and seamless third-party service integrations with Stripe and Google Calendar.",
+    solution:
+      "CueActor lets actors rehearse without a human reader. You upload a script in any format and run scenes against Hazel, an AI scene partner. Hazel reads the other characters’ lines aloud in distinct voices, listens, and takes turns in real time: you speak, and Hazel responds. Around the rehearsal experience, the platform supports booking sessions with secure payments and calendar scheduling, as well as peer-to-peer video calls between users.",
+    contribution:
+      "I worked as a frontend developer on a customer-facing, AI-powered product, collaborating closely with the product designer, backend engineers, and product manager through planning, sprints, and feature delivery:\n\n• Translated Figma designs into clean, reusable, pixel-perfect components.\n• Designed and implemented complex UI flows across onboarding, core features, and AI-assisted workflows.\n• Integrated RESTful APIs to power the AI-driven features, enabling real-time data exchange and a responsive experience.\n• Built a peer-to-peer video calling feature with the Agora SDK and WebSocket, supporting real-time communication between users.\n• Implemented custom authentication flows, including user access, session management, and secure interactions across the platform.\n• Built a booking and scheduling system that integrates Google Calendar to synchronize session availability and automate scheduling workflows.\n• Integrated Stripe to handle secure booking payments and transactions.\n• Built an admin dashboard with analytics so internal teams could monitor user activity, bookings, and platform performance.",
+    toolsUsed: [
+      "Next.js",
+      "Shadcn",
+      "Figma",
+      "REST APIs",
+      "WebSocket",
+      "Agora SDK",
+      "Stripe",
+      "Google Calendar API",
+    ],
+    techStack: [
+      "Next.js",
+      "Shadcn",
+      "Agora SDK",
+      "WebSocket",
+      "REST APIs",
+      "Stripe",
+      "Google Calendar API",
+      "Figma",
+    ],
+    images: [],
+    liveUrl: null,
+    codeUrl: null,
   },
 ];
 
@@ -176,22 +280,36 @@ export const skills = [
   "Next.js",
   "TypeScript",
   "JavaScript",
+  "ReactNative",
   "Node.js",
   "Express.js",
   "MongoDB",
   "PostgreSQL",
-  "GraphQL",
+  "Prisma",
+  // "GraphQL",
   "REST API",
   "Tailwind CSS",
   "Git / GitHub",
-  "Docker",
-  "AWS",
-  "Redis",
+  // "Docker",
+  // "AWS",
+  // "Redis",
   "Socket.io",
   "Redux / RTK",
-  "Jest",
-  "Agile / Scrum",
+  "Zustand",
+  "TanStack Query",
+  "PostGIS",
+  "Jotai",
+  // "Jest",
+  // "Agile / Scrum",
   "Firebase",
+  "Supabase",
+  "Sanity.io",
+  "Vercel AI SDK",
+  "Netlify",
+  "Vercel",
+  "Stripe",
+  "Paystack",
+  "LLM / RAG"
 ];
 
 export const blogPosts = [
@@ -204,24 +322,24 @@ export const blogPosts = [
     tags: ["System Design", "Node.js", "Architecture"],
     url: "#",
   },
-  {
-    title: "Cutting Latency by 40% with Intelligent Edge Caching & Partial Prefetching",
-    summary:
-      "Practical strategies for utilizing CDN-level caching, stale-while-revalidate patterns, and Next.js modern cache directives.",
-    date: "Aug 2024",
-    readTime: "4 min read",
-    tags: ["Performance", "Edge", "Next.js"],
-    url: "#",
-  },
-  {
-    title: "Building Production-Ready Real-Time Collaboration Systems",
-    summary:
-      "Lessons learned building WebSockets and WebRTC multi-user workspaces that handle network drops and high concurrency.",
-    date: "May 2024",
-    readTime: "8 min read",
-    tags: ["WebSockets", "WebRTC", "TypeScript"],
-    url: "#",
-  },
+  // {
+  //   title: "Cutting Latency by 40% with Intelligent Edge Caching & Partial Prefetching",
+  //   summary:
+  //     "Practical strategies for utilizing CDN-level caching, stale-while-revalidate patterns, and Next.js modern cache directives.",
+  //   date: "Aug 2024",
+  //   readTime: "4 min read",
+  //   tags: ["Performance", "Edge", "Next.js"],
+  //   url: "#",
+  // },
+  // {
+  //   title: "Building Production-Ready Real-Time Collaboration Systems",
+  //   summary:
+  //     "Lessons learned building WebSockets and WebRTC multi-user workspaces that handle network drops and high concurrency.",
+  //   date: "May 2024",
+  //   readTime: "8 min read",
+  //   tags: ["WebSockets", "WebRTC", "TypeScript"],
+  //   url: "#",
+  // },
 ];
 
 export const navLinks = [

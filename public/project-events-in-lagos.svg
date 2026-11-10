@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%" fill="none">
+  <rect width="800" height="480" rx="16" fill="#08090a"/>
+  <rect x="1" y="1" width="798" height="478" rx="15" stroke="#27272a" stroke-width="1.5"/>
+  
+  <!-- Browser topbar -->
+  <line x1="0" y1="44" x2="800" y2="44" stroke="#27272a" stroke-width="1"/>
+  <circle cx="32" cy="22" r="5" fill="#3f3f46"/>
+  <circle cx="48" cy="22" r="5" fill="#27272a"/>
+  <circle cx="64" cy="22" r="5" fill="#27272a"/>
+  <rect x="96" y="12" width="280" height="20" rx="6" fill="#18181b"/>
+  <text x="110" y="26" fill="#a1a1aa" font-family="monospace" font-size="10">events-in-lagos.vercel.app / explore</text>
+  
+  <!-- Interactive Map View -->
+  <g transform="translate(40, 68)">
+    <rect width="460" height="372" rx="12" fill="#111215" stroke="#27272a"/>
+    <!-- Map streets grid -->
+    <path d="M40 0 L40 372 M120 0 L120 372 M220 0 L220 372 M340 0 L340 372 M420 0 L420 372" stroke="#1c1d22" stroke-width="1.5"/>
+    <path d="M0 60 L460 60 M0 140 L460 140 M0 220 L460 220 M0 300 L460 300" stroke="#1c1d22" stroke-width="1.5"/>
+    <!-- Diagonal highway -->
+    <path d="M0 180 Q200 120 460 260" stroke="#2d2e35" stroke-width="4"/>
+    
+    <!-- Map event pins -->
+    <g transform="translate(160, 110)">
+      <circle cx="0" cy="0" r="14" fill="#ffffff"/>
+      <circle cx="0" cy="0" r="5" fill="#000000"/>
+      <rect x="-60" y="-36" width="120" height="22" rx="4" fill="#000000" stroke="#3f3f46"/>
+      <text x="-52" y="-22" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="600">Lagos Tech Fest '26</text>
+    </g>
+    
+    <g transform="translate(300, 200)">
+      <circle cx="0" cy="0" r="12" fill="#ffffff"/>
+      <circle cx="0" cy="0" r="4" fill="#000000"/>
+      <rect x="-50" y="-34" width="100" height="22" rx="4" fill="#000000" stroke="#3f3f46"/>
+      <text x="-42" y="-20" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="600">Afrobeats Night</text>
+    </g>
+    
+    <g transform="translate(100, 250)">
+      <circle cx="0" cy="0" r="10" fill="#27272a"/>
+      <circle cx="0" cy="0" r="3" fill="#ffffff"/>
+    </g>
+  </g>
+  
+  <!-- Right Column: RAG AI Assistant & Discovery -->
+  <g transform="translate(520, 68)">
+    <rect width="240" height="372" rx="12" fill="#111215" stroke="#27272a"/>
+    <text x="20" y="34" fill="#ffffff" font-family="sans-serif" font-weight="700" font-size="12">RAG EVENT ASSISTANT</text>
+    <rect x="20" y="48" width="200" height="52" rx="6" fill="#18181e" stroke="#27272a"/>
+    <text x="32" y="70" fill="#a1a1aa" font-family="sans-serif" font-size="10">Ask Gemini AI:</text>
+    <text x="32" y="88" fill="#ffffff" font-family="sans-serif" font-size="11">"Tech meetups in VI this Friday?"</text>
+    
+    <!-- AI response snippet -->
+    <rect x="20" y="112" width="200" height="110" rx="6" fill="#16171d"/>
+    <text x="32" y="134" fill="#34d399" font-family="sans-serif" font-size="10" font-weight="700">● 2 MATCHES FOUND</text>
+    <text x="32" y="154" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="600">1. Founders Coffee Lagos</text>
+    <text x="32" y="170" fill="#a1a1aa" font-family="sans-serif" font-size="10">8:00 AM • Victoria Island</text>
+    <text x="32" y="190" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="600">2. Web3 Builders Mixer</text>
+    <text x="32" y="206" fill="#a1a1aa" font-family="sans-serif" font-size="10">6:30 PM • Landmark VI</text>
+    
+    <!-- Dashboard metrics -->
+    <rect x="20" y="234" width="200" height="74" rx="6" fill="#18181e" stroke="#27272a"/>
+    <text x="32" y="256" fill="#a1a1aa" font-family="sans-serif" font-size="10">ORGANIZER DASHBOARD</text>
+    <text x="32" y="278" fill="#ffffff" font-family="sans-serif" font-weight="700" font-size="16">1,420 RSVP's</text>
+    <text x="32" y="296" fill="#34d399" font-family="sans-serif" font-size="10">Real-time alerts active</text>
+    
+    <rect x="20" y="320" width="200" height="38" rx="6" fill="#ffffff"/>
+    <text x="64" y="344" fill="#000000" font-family="sans-serif" font-weight="700" font-size="11">VIEW EVENT MAP &rarr;</text>
+  </g>
+</svg>

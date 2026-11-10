@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%" fill="none">
+  <rect width="800" height="480" rx="16" fill="#090a0c"/>
+  <rect x="1" y="1" width="798" height="478" rx="15" stroke="#27272a" stroke-width="1.5"/>
+  
+  <!-- Browser topbar -->
+  <line x1="0" y1="44" x2="800" y2="44" stroke="#27272a" stroke-width="1"/>
+  <circle cx="32" cy="22" r="5" fill="#3f3f46"/>
+  <circle cx="48" cy="22" r="5" fill="#27272a"/>
+  <circle cx="64" cy="22" r="5" fill="#27272a"/>
+  <rect x="96" y="12" width="260" height="20" rx="6" fill="#18181b"/>
+  <text x="110" y="26" fill="#a1a1aa" font-family="monospace" font-size="10">awujo.app / lagos / lekki-phase-1</text>
+  
+  <!-- Left Column: Zone Map & Geographic Polygons -->
+  <g transform="translate(40, 68)">
+    <rect width="360" height="372" rx="12" fill="#121316" stroke="#27272a"/>
+    <text x="24" y="36" fill="#ffffff" font-family="sans-serif" font-weight="700" font-size="13">NEIGHBOURHOOD ZONE (POSTGIS)</text>
+    
+    <!-- Map vector representation -->
+    <path d="M40 80 L180 60 L320 120 L280 260 L140 280 L50 200 Z" fill="#18181e" stroke="#3f3f46" stroke-dasharray="4 4"/>
+    <path d="M100 110 L240 90 L260 200 L140 220 Z" fill="#22222a" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="180" cy="150" r="6" fill="#ffffff"/>
+    <circle cx="180" cy="150" r="16" stroke="#ffffff" stroke-opacity="0.3"/>
+    
+    <rect x="24" y="300" width="312" height="48" rx="8" fill="#1c1c22" stroke="#27272a"/>
+    <text x="40" y="322" fill="#34d399" font-family="sans-serif" font-weight="600" font-size="11">● ACTIVE ZONE: Lekki Phase 1</text>
+    <text x="40" y="338" fill="#a1a1aa" font-family="sans-serif" font-size="10">Within 1.2km • 8 Active Group Buys</text>
+  </g>
+  
+  <!-- Right Column: Group Buys & Urgency Ranking -->
+  <g transform="translate(424, 68)">
+    <rect width="336" height="372" rx="12" fill="#121316" stroke="#27272a"/>
+    <text x="24" y="36" fill="#ffffff" font-family="sans-serif" font-weight="700" font-size="13">URGENT BULK SPLITS</text>
+    
+    <!-- Group buy item 1 -->
+    <rect x="20" y="56" width="296" height="88" rx="8" fill="#18181e" stroke="#27272a"/>
+    <text x="36" y="80" fill="#ffffff" font-family="sans-serif" font-weight="700" font-size="13">50kg Bag Mama Gold Rice</text>
+    <text x="36" y="98" fill="#a1a1aa" font-family="sans-serif" font-size="11">Wholesale: ₦72,000 (Split 4 ways)</text>
+    <rect x="36" y="112" width="140" height="18" rx="4" fill="#27272a"/>
+    <rect x="36" y="112" width="105" height="18" rx="4" fill="#ffffff"/>
+    <text x="186" y="126" fill="#ffffff" font-family="sans-serif" font-weight="700" font-size="11">3 / 4 JOINED</text>
+    
+    <!-- Group buy item 2 -->
+    <rect x="20" y="156" width="296" height="88" rx="8" fill="#18181e" stroke="#27272a"/>
+    <text x="36" y="180" fill="#ffffff" font-family="sans-serif" font-weight="700" font-size="13">25L Kings Pure Vegetable Oil</text>
+    <text x="36" y="198" fill="#a1a1aa" font-family="sans-serif" font-size="11">Wholesale: ₦48,500 (Split 5 ways)</text>
+    <rect x="36" y="212" width="140" height="18" rx="4" fill="#27272a"/>
+    <rect x="36" y="212" width="84" height="18" rx="4" fill="#ffffff"/>
+    <text x="186" y="226" fill="#ffffff" font-family="sans-serif" font-weight="700" font-size="11">3 / 5 JOINED</text>
+    
+    <!-- Action button -->
+    <rect x="20" y="296" width="296" height="48" rx="8" fill="#ffffff"/>
+    <text x="100" y="326" fill="#000000" font-family="sans-serif" font-weight="700" font-size="13">START A GROUP BUY &rarr;</text>
+  </g>
+</svg>
